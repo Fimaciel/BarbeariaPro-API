@@ -43,4 +43,10 @@ public class ClienteService
         await _context.SaveChangesAsync();
     }
 
+    public async Task<bool> CpfExiste(string? cpf)
+    {
+        if (string.IsNullOrWhiteSpace(cpf)) return false;
+
+        return await _context.Clientes.AnyAsync(c => c.Cpf == cpf);
+    }
 }

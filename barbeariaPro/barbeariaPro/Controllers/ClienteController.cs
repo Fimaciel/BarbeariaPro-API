@@ -37,8 +37,19 @@ public class ClienteController : ControllerBase
     }
 
     [HttpPost("cadastrar")]
-    public async Task<IActionResult> AdicionarCliente(ClienteDTO clienteDto)
+    public async Task<IActionResult> AdicionarCliente([FromBody] ClienteDTO clienteDto)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        var cpfExiste = await _clienteService.CpfExiste(clienteDto.Cpf);
+        if (cpfExiste)
+        {
+            return Conflict("Já existe um cliente com esse CPF.");
+        }
+
         var cliente = new Cliente
         {
             Nome = clienteDto.Nome,
@@ -54,12 +65,26 @@ public class ClienteController : ControllerBase
     }
     
     [HttpPut("{id}")]
-    public async Task<IActionResult> AtualizarCliente(int id, ClienteDTO clienteDto)
+    public async Task<IActionResult> AtualizarCliente(int id, [FromBody] ClienteDTO clienteDto)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
         var clienteExistente = await _clienteService.ObterClientePorId(id);
         if (clienteExistente == null)
         {
             return NotFound("Cliente não encontrado");
+        }
+
+        if (clienteExistente.Cpf != clienteDto.Cpf)
+        {
+            var cpfExiste = await _clienteService.CpfExiste(clienteDto.Cpf);
+            if (cpfExiste)
+            {
+                return Conflict("Já existe outro cliente com esse CPF.");
+            }
         }
 
         clienteExistente.Nome = clienteDto.Nome;
@@ -87,5 +112,4 @@ public class ClienteController : ControllerBase
 
         return NoContent();
     }
-
 }
