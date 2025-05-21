@@ -1,0 +1,63 @@
+﻿# Compiled binary folders
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code settings
+.vscode/
+
+# Rider settings
+.idea/
+
+# Build results
+*.dll
+*.exe
+*.app
+*.log
+
+# DotNet-specific files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET temp files
+*.db
+*.db-shm
+*.db-wal
+
+# Configuration files
+appsettings.Development.json
+secrets.json
+
+# Entity Framework Migrations snapshot
+Migrations/*.Designer.cs
+Migrations/*ModelSnapshot.cs
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+*.nuspec
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Others
+*.bak
+*.tmp
+*.swp
+*.swo
+*.sqlite
+*.sqlite3
+
