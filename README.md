@@ -1,4 +1,4 @@
 # BarbeariaPro-API
 
-Filipe Maciel Lopes
+Filipe Maciel Lopes, 
 Daniel Cristian Amorim Rocha
