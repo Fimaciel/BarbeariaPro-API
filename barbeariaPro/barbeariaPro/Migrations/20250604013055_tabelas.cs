@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace barbeariaPro.Migrations
 {
     /// <inheritdoc />
-    public partial class Inicial : Migration
+    public partial class tabelas : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,15 +23,15 @@ namespace barbeariaPro.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Nome = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Sobrenome = table.Column<string>(type: "longtext", nullable: false)
+                    Sobrenome = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Telefone = table.Column<string>(type: "longtext", nullable: false)
+                    Telefone = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Email = table.Column<string>(type: "longtext", nullable: false)
+                    Email = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Cpf = table.Column<string>(type: "longtext", nullable: false)
+                    Cpf = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    DataNascimento = table.Column<DateOnly>(type: "date", nullable: false)
+                    data_nascimento = table.Column<DateOnly>(type: "date", nullable: true)
                 },
                 constraints: table =>
                 {
