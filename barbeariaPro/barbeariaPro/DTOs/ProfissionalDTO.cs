@@ -1,6 +1,6 @@
 ﻿namespace barbeariaPro.DTOs;
 
-public class ProfissionalDto
+public class ProfissionalDTO
 {
     public int Id { get; set; }
     public string Nome { get; set; }
