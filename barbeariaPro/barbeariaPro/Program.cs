@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 // Adiciona o DbContext com MySQL (auto detecta a versão)
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
