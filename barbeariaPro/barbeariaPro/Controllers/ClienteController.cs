@@ -1,6 +1,7 @@
-﻿using barbeariaPro.Services;
+﻿using AutoMapper;
 using barbeariaPro.DTOs;
 using barbeariaPro.Models;
+using barbeariaPro.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace barbeariaPro.Controllers;
@@ -10,17 +11,21 @@ namespace barbeariaPro.Controllers;
 public class ClienteController : ControllerBase
 {
     private readonly ClienteService _clienteService;
+    private readonly IMapper _mapper;
 
-    public ClienteController(ClienteService clienteService)
+
+    public ClienteController(ClienteService clienteService, IMapper mapper)
     {
         _clienteService = clienteService;
+        _mapper = mapper;
     }
 
     [HttpGet]
     public async Task<IActionResult> GetClientes()
     {
         var clientes = await _clienteService.ObterTodosClientes();
-        return Ok(clientes);
+        var clienteDtos = _mapper.Map<List<ClienteDTO>>(clientes);
+        return Ok(clienteDtos);
     }
 
     [HttpGet("{id}")]
@@ -40,65 +45,36 @@ public class ClienteController : ControllerBase
     public async Task<IActionResult> AdicionarCliente([FromBody] ClienteDTO clienteDto)
     {
         if (!ModelState.IsValid)
-        {
             return BadRequest(ModelState);
-        }
 
-        var cpfExiste = await _clienteService.CpfExiste(clienteDto.Cpf);
-        if (cpfExiste)
-        {
+        if (await _clienteService.CpfExiste(clienteDto.Cpf))
             return Conflict("Já existe um cliente com esse CPF.");
-        }
 
-        var cliente = new Cliente
-        {
-            Nome = clienteDto.Nome,
-            Sobrenome = clienteDto.Sobrenome,
-            Telefone = clienteDto.Telefone,
-            Email = clienteDto.Email,
-            Cpf = clienteDto.Cpf,
-            DataNascimento = clienteDto.DataNascimento
-        };
-
+        var cliente = _mapper.Map<Cliente>(clienteDto);
         var novoCliente = await _clienteService.AdicionarCliente(cliente);
-        return CreatedAtAction(nameof(GetClientePorId), new { id = novoCliente.Id }, novoCliente);
+
+        var resultDto = _mapper.Map<ClienteDTO>(novoCliente);
+        return CreatedAtAction(nameof(GetClientePorId), new { id = novoCliente.Id }, resultDto);
     }
-    
+
+
     [HttpPut("{id}")]
     public async Task<IActionResult> AtualizarCliente(int id, [FromBody] ClienteDTO clienteDto)
     {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
+        if (!ModelState.IsValid) return BadRequest(ModelState);
 
         var clienteExistente = await _clienteService.ObterClientePorId(id);
-        if (clienteExistente == null)
-        {
-            return NotFound("Cliente não encontrado");
-        }
+        if (clienteExistente == null) return NotFound("Cliente não encontrado");
 
-        if (clienteExistente.Cpf != clienteDto.Cpf)
-        {
-            var cpfExiste = await _clienteService.CpfExiste(clienteDto.Cpf);
-            if (cpfExiste)
-            {
-                return Conflict("Já existe outro cliente com esse CPF.");
-            }
-        }
+        if (clienteExistente.Cpf != clienteDto.Cpf && await _clienteService.CpfExiste(clienteDto.Cpf))
+            return Conflict("Já existe outro cliente com esse CPF.");
 
-        clienteExistente.Nome = clienteDto.Nome;
-        clienteExistente.Sobrenome = clienteDto.Sobrenome;
-        clienteExistente.Telefone = clienteDto.Telefone;
-        clienteExistente.Email = clienteDto.Email;
-        clienteExistente.Cpf = clienteDto.Cpf;
-        clienteExistente.DataNascimento = clienteDto.DataNascimento;
-
+        _mapper.Map(clienteDto, clienteExistente);
         await _clienteService.AtualizarCliente(clienteExistente);
 
         return NoContent();
     }
-    
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletarCliente(int id)
     {
