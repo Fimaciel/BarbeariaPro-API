@@ -11,6 +11,4 @@ public class CaixaDTO
 
     public int UsuarioFk { get; set; }
     public string NomeUsuario { get; set; }
-
-    public List<MovimentacaoCaixaDTO> Movimentacoes { get; set; }
 }
