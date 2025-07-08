@@ -7,12 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace barbeariaPro.Controllers;
 
 [ApiController]
-[Route("clientes")]
+[Route("api/[controller]")]
 public class ClienteController : ControllerBase
 {
     private readonly ClienteService _clienteService;
     private readonly IMapper _mapper;
-
 
     public ClienteController(ClienteService clienteService, IMapper mapper)
     {
@@ -21,71 +20,53 @@ public class ClienteController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetClientes()
+    public async Task<IActionResult> GetTodos()
     {
         var clientes = await _clienteService.ObterTodosClientes();
-        var clienteDtos = _mapper.Map<List<ClienteDTO>>(clientes);
-        return Ok(clienteDtos);
+        return Ok(_mapper.Map<List<ClienteDTO>>(clientes));
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetClientePorId(int id)
+    public async Task<IActionResult> GetPorId(int id)
     {
         var cliente = await _clienteService.ObterClientePorId(id);
-        
-        if (cliente == null)
-        {
-            return NotFound("Cliente não encontrado");
-        }
-        
-        return Ok(cliente);
+        if (cliente == null) return NotFound("Cliente não encontrado.");
+        return Ok(_mapper.Map<ClienteDTO>(cliente));
     }
 
-    [HttpPost("cadastrar")]
-    public async Task<IActionResult> AdicionarCliente([FromBody] ClienteDTO clienteDto)
-    {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
-
-        if (await _clienteService.CpfExiste(clienteDto.Cpf))
-            return Conflict("Já existe um cliente com esse CPF.");
-
-        var cliente = _mapper.Map<Cliente>(clienteDto);
-        var novoCliente = await _clienteService.AdicionarCliente(cliente);
-
-        var resultDto = _mapper.Map<ClienteDTO>(novoCliente);
-        return CreatedAtAction(nameof(GetClientePorId), new { id = novoCliente.Id }, resultDto);
-    }
-
-
-    [HttpPut("{id}")]
-    public async Task<IActionResult> AtualizarCliente(int id, [FromBody] ClienteDTO clienteDto)
+    [HttpPost]
+    public async Task<IActionResult> Adicionar([FromBody] ClienteDTO clienteDto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
-        var clienteExistente = await _clienteService.ObterClientePorId(id);
-        if (clienteExistente == null) return NotFound("Cliente não encontrado");
+        if (await _clienteService.CpfExiste(clienteDto.Cpf))
+        {
+            return Conflict("Já existe um cliente com esse CPF.");
+        }
 
-        if (clienteExistente.Cpf != clienteDto.Cpf && await _clienteService.CpfExiste(clienteDto.Cpf))
-            return Conflict("Já existe outro cliente com esse CPF.");
+        var cliente = _mapper.Map<Cliente>(clienteDto);
+        var novoCliente = await _clienteService.AdicionarCliente(cliente);
+        return CreatedAtAction(nameof(GetPorId), new { id = novoCliente.Id }, _mapper.Map<ClienteDTO>(novoCliente));
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Atualizar(int id, [FromBody] ClienteDTO clienteDto)
+    {
+        var clienteExistente = await _clienteService.ObterClientePorId(id);
+        if (clienteExistente == null) return NotFound("Cliente não encontrado.");
 
         _mapper.Map(clienteDto, clienteExistente);
         await _clienteService.AtualizarCliente(clienteExistente);
-
         return NoContent();
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeletarCliente(int id)
+    public async Task<IActionResult> Deletar(int id)
     {
-        var cliente = await _clienteService.ObterClientePorId(id);
-        if (cliente == null)
-        {
-            return NotFound("Cliente não encontrado");
-        }
+        var clienteExistente = await _clienteService.ObterClientePorId(id);
+        if (clienteExistente == null) return NotFound("Cliente não encontrado.");
 
-        await _clienteService.DeletarCliente(cliente);
-
+        await _clienteService.DeletarCliente(clienteExistente);
         return NoContent();
     }
 }

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace barbeariaPro.Controllers;
 
 [ApiController]
-[Route("caixas")]
+[Route("api/[controller]")]
 public class CaixaController : ControllerBase
 {
     private readonly CaixaService _caixaService;
@@ -31,40 +31,37 @@ public class CaixaController : ControllerBase
     {
         var caixa = await _caixaService.ObterPorId(id);
         if (caixa == null) return NotFound("Caixa não encontrado.");
-
         return Ok(_mapper.Map<CaixaDTO>(caixa));
     }
 
     [HttpPost]
-    public async Task<IActionResult> Adicionar([FromBody] CaixaDTO dto)
+    public async Task<IActionResult> Adicionar([FromBody] CaixaDTO caixaDto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
-        var caixa = _mapper.Map<Caixa>(dto);
+        var caixa = _mapper.Map<Caixa>(caixaDto);
         var novoCaixa = await _caixaService.Adicionar(caixa);
-
         return CreatedAtAction(nameof(GetPorId), new { id = novoCaixa.Id }, _mapper.Map<CaixaDTO>(novoCaixa));
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Atualizar(int id, [FromBody] CaixaDTO dto)
+    public async Task<IActionResult> Atualizar(int id, [FromBody] CaixaDTO caixaDto)
     {
         var caixaExistente = await _caixaService.ObterPorId(id);
         if (caixaExistente == null) return NotFound("Caixa não encontrado.");
 
-        _mapper.Map(dto, caixaExistente);
+        _mapper.Map(caixaDto, caixaExistente);
         await _caixaService.Atualizar(caixaExistente);
-
         return NoContent();
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Deletar(int id)
     {
-        var caixa = await _caixaService.ObterPorId(id);
-        if (caixa == null) return NotFound("Caixa não encontrado.");
+        var caixaExistente = await _caixaService.ObterPorId(id);
+        if (caixaExistente == null) return NotFound("Caixa não encontrado.");
 
-        await _caixaService.Deletar(caixa);
+        await _caixaService.Deletar(caixaExistente);
         return NoContent();
     }
 }

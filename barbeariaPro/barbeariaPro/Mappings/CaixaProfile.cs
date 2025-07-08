@@ -9,8 +9,7 @@ public class CaixaProfile : Profile
     public CaixaProfile()
     {
         CreateMap<Caixa, CaixaDTO>()
-            .ForMember(dest => dest.NomeUsuario, opt => opt.MapFrom(src => src.Usuario.Id))
-            .ForMember(dest => dest.Movimentacoes, opt => opt.MapFrom(src => src.Movimentacoes));
+            .ForMember(dest => dest.NomeUsuario, opt => opt.MapFrom(src => src.Usuario.Email));
 
         CreateMap<CaixaDTO, Caixa>();
     }

@@ -1,107 +1,67 @@
-﻿using barbeariaPro.dbContext;
-using barbeariaPro.Services;
+﻿using AutoMapper;
 using barbeariaPro.DTOs;
 using barbeariaPro.Models;
+using barbeariaPro.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+
+namespace barbeariaPro.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class AgendamentosController : ControllerBase
+public class AgendamentoController : ControllerBase
 {
-    private readonly AppDbContext _context;
+    private readonly AgendamentoService _agendamentoService;
+    private readonly IMapper _mapper;
 
-    public AgendamentosController(AppDbContext context)
+    public AgendamentoController(AgendamentoService agendamentoService, IMapper mapper)
     {
-        _context = context;
+        _agendamentoService = agendamentoService;
+        _mapper = mapper;
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<AgendamentoDto>>> GetAgendamentos()
+    public async Task<IActionResult> GetTodos()
     {
-        var agendamentos = await _context.Agendamentos
-            .Select(a => new AgendamentoDto
-            {
-                Id = a.Id,
-                DataHorario = a.DataHorario,
-                Status = a.Status,
-                Observacoes = a.Observacoes,
-                MotivoCancelamento = a.MotivoCancelamento,
-                ServicoFk = a.ServicoFk,
-                ClienteFk = a.ClienteFk,
-                ProfissionalFk = a.ProfissionalFk
-            }).ToListAsync();
-
-        return Ok(agendamentos);
+        var agendamentos = await _agendamentoService.ObterTodos();
+        return Ok(_mapper.Map<List<AgendamentoDTO>>(agendamentos));
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<AgendamentoDto>> GetAgendamento(int id)
+    public async Task<IActionResult> GetPorId(int id)
     {
-        var a = await _context.Agendamentos.FindAsync(id);
-        if (a == null) return NotFound();
-
-        return new AgendamentoDto
-        {
-            Id = a.Id,
-            DataHorario = a.DataHorario,
-            Status = a.Status,
-            Observacoes = a.Observacoes,
-            MotivoCancelamento = a.MotivoCancelamento,
-            ServicoFk = a.ServicoFk,
-            ClienteFk = a.ClienteFk,
-            ProfissionalFk = a.ProfissionalFk
-        };
+        var agendamento = await _agendamentoService.ObterPorId(id);
+        if (agendamento == null) return NotFound("Agendamento não encontrado.");
+        return Ok(_mapper.Map<AgendamentoDTO>(agendamento));
     }
 
     [HttpPost]
-    public async Task<ActionResult> PostAgendamento(AgendamentoDto dto)
+    public async Task<IActionResult> Adicionar([FromBody] AgendamentoDTO agendamentoDto)
     {
-        var agendamento = new Agendamento
-        {
-            DataHorario = dto.DataHorario,
-            Status = dto.Status,
-            Observacoes = dto.Observacoes,
-            MotivoCancelamento = dto.MotivoCancelamento,
-            ServicoFk = dto.ServicoFk,
-            ClienteFk = dto.ClienteFk,
-            ProfissionalFk = dto.ProfissionalFk
-        };
+        if (!ModelState.IsValid) return BadRequest(ModelState);
 
-        _context.Agendamentos.Add(agendamento);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction(nameof(GetAgendamento), new { id = agendamento.Id }, agendamento);
+        var agendamento = _mapper.Map<Agendamento>(agendamentoDto);
+        var novoAgendamento = await _agendamentoService.Adicionar(agendamento);
+        return CreatedAtAction(nameof(GetPorId), new { id = novoAgendamento.Id }, _mapper.Map<AgendamentoDTO>(novoAgendamento));
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutAgendamento(int id, AgendamentoDto dto)
+    public async Task<IActionResult> Atualizar(int id, [FromBody] AgendamentoDTO agendamentoDto)
     {
-        var agendamento = await _context.Agendamentos.FindAsync(id);
-        if (agendamento == null) return NotFound();
+        var agendamentoExistente = await _agendamentoService.ObterPorId(id);
+        if (agendamentoExistente == null) return NotFound("Agendamento não encontrado.");
 
-        agendamento.DataHorario = dto.DataHorario;
-        agendamento.Status = dto.Status;
-        agendamento.Observacoes = dto.Observacoes;
-        agendamento.MotivoCancelamento = dto.MotivoCancelamento;
-        agendamento.ServicoFk = dto.ServicoFk;
-        agendamento.ClienteFk = dto.ClienteFk;
-        agendamento.ProfissionalFk = dto.ProfissionalFk;
-
-        await _context.SaveChangesAsync();
-
+        _mapper.Map(agendamentoDto, agendamentoExistente);
+        await _agendamentoService.Atualizar(agendamentoExistente);
         return NoContent();
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteAgendamento(int id)
+    public async Task<IActionResult> Deletar(int id)
     {
-        var agendamento = await _context.Agendamentos.FindAsync(id);
-        if (agendamento == null) return NotFound();
+        var agendamentoExistente = await _agendamentoService.ObterPorId(id);
+        if (agendamentoExistente == null) return NotFound("Agendamento não encontrado.");
 
-        _context.Agendamentos.Remove(agendamento);
-        await _context.SaveChangesAsync();
-
+        await _agendamentoService.Deletar(agendamentoExistente);
         return NoContent();
     }
 }

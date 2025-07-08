@@ -1,5 +1,5 @@
-﻿using barbeariaPro.dbContext;
-using barbeariaPro.Models;
+﻿using barbeariaPro.Models;
+using barbeariaPro.dbContext;
 using Microsoft.EntityFrameworkCore;
 
 namespace barbeariaPro.Services;
@@ -15,29 +15,24 @@ public class ProfissionalService
 
     public async Task<List<Profissional>> ObterTodos()
     {
-        return await _context.Profissional
-            .Include(p => p.Usuario) 
-            .Where(p => p.DataExclusao == null)
-            .ToListAsync();
+        return await _context.Profissionais.Include(p => p.Usuario).Where(p => p.DataExclusao == null).ToListAsync();
     }
 
     public async Task<Profissional?> ObterPorId(int id)
     {
-        return await _context.Profissional
-            .Include(p => p.Usuario)
-            .FirstOrDefaultAsync(p => p.Id == id && p.DataExclusao == null);
+        return await _context.Profissionais.Include(p => p.Usuario).FirstOrDefaultAsync(p => p.Id == id && p.DataExclusao == null);
     }
 
     public async Task<Profissional> Adicionar(Profissional profissional)
     {
-        _context.Profissional.Add(profissional);
+        _context.Profissionais.Add(profissional);
         await _context.SaveChangesAsync();
         return profissional;
     }
 
     public async Task Atualizar(Profissional profissional)
     {
-        _context.Profissional.Update(profissional);
+        _context.Profissionais.Update(profissional);
         await _context.SaveChangesAsync();
     }
 
@@ -45,11 +40,5 @@ public class ProfissionalService
     {
         profissional.DataExclusao = DateTime.UtcNow;
         await _context.SaveChangesAsync();
-    }
-
-    public async Task<bool> CpfExiste(string cpf)
-    {
-        return await _context.Profissional
-            .AnyAsync(p => p.CPF == cpf && p.DataExclusao == null);
     }
 }

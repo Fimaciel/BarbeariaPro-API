@@ -12,17 +12,17 @@ public class AppDbContext :  Microsoft.EntityFrameworkCore.DbContext
     
     public DbSet<Caixa> Caixas { get; set; }
     
-    public DbSet<MovimentacaoCaixa> MovimentacaoCaixa { get; set; }
+    public DbSet<MovimentacaoCaixa> MovimentacoesCaixa { get; set; }
     
-    public DbSet<Pagamento> Pagamento { get; set; }
+    public DbSet<Pagamento> Pagamentos { get; set; }
     
-    public DbSet<Profissional> Profissional { get; set; }
+    public DbSet<Profissional> Profissionais { get; set; }
     
-    public DbSet<ProfissionalServico> ProfissionalServico { get; set; }
+    public DbSet<ProfissionalServico> ProfissionalServicos { get; set; }
     
-    public DbSet<Servico> Servico { get; set; }
+    public DbSet<Servico> Servicos { get; set; }
     
-    public DbSet<Usuario> Usuario { get; set; }
+    public DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

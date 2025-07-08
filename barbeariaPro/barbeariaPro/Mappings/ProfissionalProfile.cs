@@ -9,6 +9,7 @@ public class ProfissionalProfile : Profile
     public ProfissionalProfile()
     {
         CreateMap<Profissional, ProfissionalDTO>();
+
         CreateMap<ProfissionalDTO, Profissional>();
     }
 }

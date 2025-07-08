@@ -2,13 +2,14 @@
 using barbeariaPro.Models;
 using barbeariaPro.DTOs;
 
-namespace barbeariaPro.Mappings
+namespace barbeariaPro.Mappings;
+
+public class ClienteProfile : Profile
 {
-    public class ClienteProfile : Profile
+    public ClienteProfile()
     {
-        public ClienteProfile()
-        {
-            CreateMap<Cliente, ClienteDTO>().ReverseMap();
-        }
+        CreateMap<Cliente, ClienteDTO>();
+
+        CreateMap<ClienteDTO, Cliente>();
     }
 }

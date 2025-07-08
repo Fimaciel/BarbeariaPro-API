@@ -13,36 +13,32 @@ public class MovimentacaoCaixaService
         _context = context;
     }
 
-    public async Task<List<MovimentacaoCaixa>> ObterTodas()
+    public async Task<List<MovimentacaoCaixa>> ObterTodos()
     {
-        return await _context.MovimentacaoCaixa
-            .Include(m => m.Caixa)
-            .ToListAsync();
+        return await _context.MovimentacoesCaixa.Include(m => m.Caixa).ToListAsync();
     }
 
     public async Task<MovimentacaoCaixa?> ObterPorId(int id)
     {
-        return await _context.MovimentacaoCaixa
-            .Include(m => m.Caixa)
-            .FirstOrDefaultAsync(m => m.Id == id);
+        return await _context.MovimentacoesCaixa.Include(m => m.Caixa).FirstOrDefaultAsync(m => m.Id == id);
     }
 
     public async Task<MovimentacaoCaixa> Adicionar(MovimentacaoCaixa movimentacao)
     {
-        _context.MovimentacaoCaixa.Add(movimentacao);
+        _context.MovimentacoesCaixa.Add(movimentacao);
         await _context.SaveChangesAsync();
         return movimentacao;
     }
 
     public async Task Atualizar(MovimentacaoCaixa movimentacao)
     {
-        _context.MovimentacaoCaixa.Update(movimentacao);
+        _context.MovimentacoesCaixa.Update(movimentacao);
         await _context.SaveChangesAsync();
     }
 
     public async Task Deletar(MovimentacaoCaixa movimentacao)
     {
-        _context.MovimentacaoCaixa.Remove(movimentacao);
+        _context.MovimentacoesCaixa.Remove(movimentacao);
         await _context.SaveChangesAsync();
     }
 }

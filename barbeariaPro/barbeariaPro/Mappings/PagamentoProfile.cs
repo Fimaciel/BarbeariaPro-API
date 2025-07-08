@@ -8,6 +8,8 @@ public class PagamentoProfile : Profile
 {
     public PagamentoProfile()
     {
-        CreateMap<Pagamento, PagamentoDTO>().ReverseMap();
+        CreateMap<Pagamento, PagamentoDTO>();
+
+        CreateMap<PagamentoDTO, Pagamento>();
     }
 }

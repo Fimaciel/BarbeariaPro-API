@@ -8,7 +8,8 @@ public class ServicoProfile : Profile
 {
     public ServicoProfile()
     {
-        CreateMap<Servico, ServicoDTO>().ReverseMap();
+        CreateMap<Servico, ServicoDTO>();
+
+        CreateMap<ServicoDTO, Servico>();
     }
 }
-    

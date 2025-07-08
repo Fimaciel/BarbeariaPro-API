@@ -8,6 +8,8 @@ public class MovimentacaoCaixaProfile : Profile
 {
     public MovimentacaoCaixaProfile()
     {
-        CreateMap<MovimentacaoCaixa, MovimentacaoCaixaDTO>().ReverseMap();
+        CreateMap<MovimentacaoCaixa, MovimentacaoCaixaDTO>();
+
+        CreateMap<MovimentacaoCaixaDTO, MovimentacaoCaixa>();
     }
 }

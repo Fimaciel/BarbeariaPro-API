@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace barbeariaPro.Controllers;
 
 [ApiController]
-[Route("servicos")]
+[Route("api/[controller]")]
 public class ServicoController : ControllerBase
 {
     private readonly ServicoService _servicoService;
@@ -22,8 +22,8 @@ public class ServicoController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetTodos()
     {
-        var lista = await _servicoService.ObterTodos();
-        return Ok(_mapper.Map<List<ServicoDTO>>(lista));
+        var servicos = await _servicoService.ObterTodos();
+        return Ok(_mapper.Map<List<ServicoDTO>>(servicos));
     }
 
     [HttpGet("{id}")]
@@ -35,33 +35,33 @@ public class ServicoController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Adicionar([FromBody] ServicoDTO dto)
+    public async Task<IActionResult> Adicionar([FromBody] ServicoDTO servicoDto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
-        var servico = _mapper.Map<Servico>(dto);
-        var novo = await _servicoService.Adicionar(servico);
-        return CreatedAtAction(nameof(GetPorId), new { id = novo.Id }, _mapper.Map<ServicoDTO>(novo));
+        var servico = _mapper.Map<Servico>(servicoDto);
+        var novoServico = await _servicoService.Adicionar(servico);
+        return CreatedAtAction(nameof(GetPorId), new { id = novoServico.Id }, _mapper.Map<ServicoDTO>(novoServico));
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Atualizar(int id, [FromBody] ServicoDTO dto)
+    public async Task<IActionResult> Atualizar(int id, [FromBody] ServicoDTO servicoDto)
     {
-        var existente = await _servicoService.ObterPorId(id);
-        if (existente == null) return NotFound("Serviço não encontrado.");
+        var servicoExistente = await _servicoService.ObterPorId(id);
+        if (servicoExistente == null) return NotFound("Serviço não encontrado.");
 
-        _mapper.Map(dto, existente);
-        await _servicoService.Atualizar(existente);
+        _mapper.Map(servicoDto, servicoExistente);
+        await _servicoService.Atualizar(servicoExistente);
         return NoContent();
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Deletar(int id)
     {
-        var existente = await _servicoService.ObterPorId(id);
-        if (existente == null) return NotFound("Serviço não encontrado.");
+        var servicoExistente = await _servicoService.ObterPorId(id);
+        if (servicoExistente == null) return NotFound("Serviço não encontrado.");
 
-        await _servicoService.Deletar(existente);
+        await _servicoService.Deletar(servicoExistente);
         return NoContent();
     }
 }

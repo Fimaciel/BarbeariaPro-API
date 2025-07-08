@@ -1,5 +1,5 @@
-﻿using barbeariaPro.dbContext;
-using barbeariaPro.Models;
+﻿using barbeariaPro.Models;
+using barbeariaPro.dbContext;
 using Microsoft.EntityFrameworkCore;
 
 namespace barbeariaPro.Services;
@@ -15,34 +15,30 @@ public class UsuarioService
 
     public async Task<List<Usuario>> ObterTodos()
     {
-        return await _context.Usuario
-            .Include(u => u.Profissional)
-            .ToListAsync();
+        return await _context.Usuarios.Include(u => u.Profissional).ToListAsync();
     }
 
     public async Task<Usuario?> ObterPorId(int id)
     {
-        return await _context.Usuario
-            .Include(u => u.Profissional)
-            .FirstOrDefaultAsync(u => u.Id == id);
+        return await _context.Usuarios.Include(u => u.Profissional).FirstOrDefaultAsync(u => u.Id == id);
     }
 
     public async Task<Usuario> Adicionar(Usuario usuario)
     {
-        _context.Usuario.Add(usuario);
+        _context.Usuarios.Add(usuario);
         await _context.SaveChangesAsync();
         return usuario;
     }
 
     public async Task Atualizar(Usuario usuario)
     {
-        _context.Usuario.Update(usuario);
+        _context.Usuarios.Update(usuario);
         await _context.SaveChangesAsync();
     }
 
     public async Task Deletar(Usuario usuario)
     {
-        _context.Usuario.Remove(usuario);
+        _context.Usuarios.Remove(usuario);
         await _context.SaveChangesAsync();
     }
 }

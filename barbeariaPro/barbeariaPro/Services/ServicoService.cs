@@ -15,27 +15,24 @@ public class ServicoService
 
     public async Task<List<Servico>> ObterTodos()
     {
-        return await _context.Servico
-            .Where(s => s.DataExclusao == null)
-            .ToListAsync();
+        return await _context.Servicos.Where(s => s.DataExclusao == null).ToListAsync();
     }
 
     public async Task<Servico?> ObterPorId(int id)
     {
-        return await _context.Servico
-            .FirstOrDefaultAsync(s => s.Id == id && s.DataExclusao == null);
+        return await _context.Servicos.FirstOrDefaultAsync(s => s.Id == id && s.DataExclusao == null);
     }
 
     public async Task<Servico> Adicionar(Servico servico)
     {
-        _context.Servico.Add(servico);
+        _context.Servicos.Add(servico);
         await _context.SaveChangesAsync();
         return servico;
     }
 
     public async Task Atualizar(Servico servico)
     {
-        _context.Servico.Update(servico);
+        _context.Servicos.Update(servico);
         await _context.SaveChangesAsync();
     }
 

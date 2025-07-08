@@ -11,8 +11,10 @@ namespace barbeariaPro.Extensions
             services.AddScoped<ServicoService>();
             services.AddScoped<UsuarioService>();
             services.AddScoped<ProfissionalService>();
+            services.AddScoped<ProfissionalServicoService>();
             services.AddScoped<CaixaService>();
             services.AddScoped<PagamentoService>();
+            services.AddScoped<AgendamentoService>();
             services.AddScoped<MovimentacaoCaixaService>();
         }
     }

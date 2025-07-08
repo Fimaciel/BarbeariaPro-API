@@ -6,7 +6,7 @@ public class Agendamento
     public DateTime DataHorario { get; set; }
     public string Status { get; set; }
     public string Observacoes { get; set; }
-    public string MotivoCancelamento { get; set; }
+    public string ?MotivoCancelamento { get; set; }
 
     public int ServicoFk { get; set; }
     public Servico Servico { get; set; }

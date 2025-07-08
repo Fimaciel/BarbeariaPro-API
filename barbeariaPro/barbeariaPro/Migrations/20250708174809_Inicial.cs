@@ -40,7 +40,7 @@ namespace barbeariaPro.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Profissional",
+                name: "Profissionais",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -62,12 +62,12 @@ namespace barbeariaPro.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Profissional", x => x.Id);
+                    table.PrimaryKey("PK_Profissionais", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Servico",
+                name: "Servicos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -85,12 +85,12 @@ namespace barbeariaPro.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Servico", x => x.Id);
+                    table.PrimaryKey("PK_Servicos", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Usuario",
+                name: "Usuarios",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -105,11 +105,11 @@ namespace barbeariaPro.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuario", x => x.Id);
+                    table.PrimaryKey("PK_Usuarios", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Usuario_Profissional_ProfissionalFk",
+                        name: "FK_Usuarios_Profissionais_ProfissionalFk",
                         column: x => x.ProfissionalFk,
-                        principalTable: "Profissional",
+                        principalTable: "Profissionais",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
@@ -130,8 +130,7 @@ namespace barbeariaPro.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ServicoFk = table.Column<int>(type: "int", nullable: false),
                     ClienteFk = table.Column<int>(type: "int", nullable: false),
-                    ProfissionalFk = table.Column<int>(type: "int", nullable: false),
-                    ServicoId = table.Column<int>(type: "int", nullable: true)
+                    ProfissionalFk = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -143,27 +142,22 @@ namespace barbeariaPro.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Agendamentos_Profissional_ProfissionalFk",
+                        name: "FK_Agendamentos_Profissionais_ProfissionalFk",
                         column: x => x.ProfissionalFk,
-                        principalTable: "Profissional",
+                        principalTable: "Profissionais",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Agendamentos_Servico_ServicoFk",
+                        name: "FK_Agendamentos_Servicos_ServicoFk",
                         column: x => x.ServicoFk,
-                        principalTable: "Servico",
+                        principalTable: "Servicos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Agendamentos_Servico_ServicoId",
-                        column: x => x.ServicoId,
-                        principalTable: "Servico",
-                        principalColumn: "Id");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "ProfissionalServico",
+                name: "ProfissionalServicos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -173,17 +167,17 @@ namespace barbeariaPro.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProfissionalServico", x => x.Id);
+                    table.PrimaryKey("PK_ProfissionalServicos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProfissionalServico_Profissional_ProfissionalFk",
+                        name: "FK_ProfissionalServicos_Profissionais_ProfissionalFk",
                         column: x => x.ProfissionalFk,
-                        principalTable: "Profissional",
+                        principalTable: "Profissionais",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProfissionalServico_Servico_ServicoFk",
+                        name: "FK_ProfissionalServicos_Servicos_ServicoFk",
                         column: x => x.ServicoFk,
-                        principalTable: "Servico",
+                        principalTable: "Servicos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
@@ -202,23 +196,22 @@ namespace barbeariaPro.Migrations
                     Status = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     DataExclusao = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    UsuarioFk = table.Column<int>(type: "int", nullable: false),
-                    UsuarioId = table.Column<int>(type: "int", nullable: false)
+                    UsuarioFk = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Caixas", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Caixas_Usuario_UsuarioId",
-                        column: x => x.UsuarioId,
-                        principalTable: "Usuario",
+                        name: "FK_Caixas_Usuarios_UsuarioFk",
+                        column: x => x.UsuarioFk,
+                        principalTable: "Usuarios",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Pagamento",
+                name: "Pagamentos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -230,15 +223,14 @@ namespace barbeariaPro.Migrations
                     ComprovantePath = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     DataEstorno = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    AgendamentoFk = table.Column<int>(type: "int", nullable: false),
-                    AgendamentoId = table.Column<int>(type: "int", nullable: false)
+                    AgendamentoFk = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pagamento", x => x.Id);
+                    table.PrimaryKey("PK_Pagamentos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Pagamento_Agendamentos_AgendamentoId",
-                        column: x => x.AgendamentoId,
+                        name: "FK_Pagamentos_Agendamentos_AgendamentoFk",
+                        column: x => x.AgendamentoFk,
                         principalTable: "Agendamentos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -246,7 +238,7 @@ namespace barbeariaPro.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "MovimentacaoCaixa",
+                name: "MovimentacoesCaixa",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -260,15 +252,14 @@ namespace barbeariaPro.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ComprovantePath = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    CaixaFk = table.Column<int>(type: "int", nullable: false),
-                    CaixaId = table.Column<int>(type: "int", nullable: false)
+                    CaixaFk = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MovimentacaoCaixa", x => x.Id);
+                    table.PrimaryKey("PK_MovimentacoesCaixa", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MovimentacaoCaixa_Caixas_CaixaId",
-                        column: x => x.CaixaId,
+                        name: "FK_MovimentacoesCaixa_Caixas_CaixaFk",
+                        column: x => x.CaixaFk,
                         principalTable: "Caixas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -291,38 +282,33 @@ namespace barbeariaPro.Migrations
                 column: "ServicoFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Agendamentos_ServicoId",
-                table: "Agendamentos",
-                column: "ServicoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Caixas_UsuarioId",
+                name: "IX_Caixas_UsuarioFk",
                 table: "Caixas",
-                column: "UsuarioId");
+                column: "UsuarioFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MovimentacaoCaixa_CaixaId",
-                table: "MovimentacaoCaixa",
-                column: "CaixaId");
+                name: "IX_MovimentacoesCaixa_CaixaFk",
+                table: "MovimentacoesCaixa",
+                column: "CaixaFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Pagamento_AgendamentoId",
-                table: "Pagamento",
-                column: "AgendamentoId");
+                name: "IX_Pagamentos_AgendamentoFk",
+                table: "Pagamentos",
+                column: "AgendamentoFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProfissionalServico_ProfissionalFk",
-                table: "ProfissionalServico",
+                name: "IX_ProfissionalServicos_ProfissionalFk",
+                table: "ProfissionalServicos",
                 column: "ProfissionalFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProfissionalServico_ServicoFk",
-                table: "ProfissionalServico",
+                name: "IX_ProfissionalServicos_ServicoFk",
+                table: "ProfissionalServicos",
                 column: "ServicoFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Usuario_ProfissionalFk",
-                table: "Usuario",
+                name: "IX_Usuarios_ProfissionalFk",
+                table: "Usuarios",
                 column: "ProfissionalFk",
                 unique: true);
         }
@@ -331,13 +317,13 @@ namespace barbeariaPro.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "MovimentacaoCaixa");
+                name: "MovimentacoesCaixa");
 
             migrationBuilder.DropTable(
-                name: "Pagamento");
+                name: "Pagamentos");
 
             migrationBuilder.DropTable(
-                name: "ProfissionalServico");
+                name: "ProfissionalServicos");
 
             migrationBuilder.DropTable(
                 name: "Caixas");
@@ -346,16 +332,16 @@ namespace barbeariaPro.Migrations
                 name: "Agendamentos");
 
             migrationBuilder.DropTable(
-                name: "Usuario");
+                name: "Usuarios");
 
             migrationBuilder.DropTable(
                 name: "Clientes");
 
             migrationBuilder.DropTable(
-                name: "Servico");
+                name: "Servicos");
 
             migrationBuilder.DropTable(
-                name: "Profissional");
+                name: "Profissionais");
         }
     }
 }

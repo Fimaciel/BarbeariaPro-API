@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace barbeariaPro.Controllers;
 
 [ApiController]
-[Route("usuarios")]
+[Route("api/[controller]")]
 public class UsuarioController : ControllerBase
 {
     private readonly UsuarioService _usuarioService;
@@ -22,8 +22,8 @@ public class UsuarioController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetTodos()
     {
-        var lista = await _usuarioService.ObterTodos();
-        return Ok(_mapper.Map<List<UsuarioDTO>>(lista));
+        var usuarios = await _usuarioService.ObterTodos();
+        return Ok(_mapper.Map<List<UsuarioDTO>>(usuarios));
     }
 
     [HttpGet("{id}")]
@@ -31,40 +31,37 @@ public class UsuarioController : ControllerBase
     {
         var usuario = await _usuarioService.ObterPorId(id);
         if (usuario == null) return NotFound("Usuário não encontrado.");
-
         return Ok(_mapper.Map<UsuarioDTO>(usuario));
     }
 
     [HttpPost]
-    public async Task<IActionResult> Adicionar([FromBody] UsuarioDTO dto)
+    public async Task<IActionResult> Adicionar([FromBody] UsuarioDTO usuarioDto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
-        var usuario = _mapper.Map<Usuario>(dto);
-        var novo = await _usuarioService.Adicionar(usuario);
-
-        return CreatedAtAction(nameof(GetPorId), new { id = novo.Id }, _mapper.Map<UsuarioDTO>(novo));
+        var usuario = _mapper.Map<Usuario>(usuarioDto);
+        var novoUsuario = await _usuarioService.Adicionar(usuario);
+        return CreatedAtAction(nameof(GetPorId), new { id = novoUsuario.Id }, _mapper.Map<UsuarioDTO>(novoUsuario));
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Atualizar(int id, [FromBody] UsuarioDTO dto)
+    public async Task<IActionResult> Atualizar(int id, [FromBody] UsuarioDTO usuarioDto)
     {
-        var existente = await _usuarioService.ObterPorId(id);
-        if (existente == null) return NotFound("Usuário não encontrado.");
+        var usuarioExistente = await _usuarioService.ObterPorId(id);
+        if (usuarioExistente == null) return NotFound("Usuário não encontrado.");
 
-        _mapper.Map(dto, existente);
-        await _usuarioService.Atualizar(existente);
-
+        _mapper.Map(usuarioDto, usuarioExistente);
+        await _usuarioService.Atualizar(usuarioExistente);
         return NoContent();
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Deletar(int id)
     {
-        var existente = await _usuarioService.ObterPorId(id);
-        if (existente == null) return NotFound("Usuário não encontrado.");
+        var usuarioExistente = await _usuarioService.ObterPorId(id);
+        if (usuarioExistente == null) return NotFound("Usuário não encontrado.");
 
-        await _usuarioService.Deletar(existente);
+        await _usuarioService.Deletar(usuarioExistente);
         return NoContent();
     }
 }

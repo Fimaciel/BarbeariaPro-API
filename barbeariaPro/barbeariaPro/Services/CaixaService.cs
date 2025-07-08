@@ -15,18 +15,12 @@ public class CaixaService
 
     public async Task<List<Caixa>> ObterTodos()
     {
-        return await _context.Caixas
-            .Include(c => c.Usuario)
-            .Include(c => c.Movimentacoes)
-            .ToListAsync();
+        return await _context.Caixas.Include(c => c.Usuario).ToListAsync();
     }
 
     public async Task<Caixa?> ObterPorId(int id)
     {
-        return await _context.Caixas
-            .Include(c => c.Usuario)
-            .Include(c => c.Movimentacoes)
-            .FirstOrDefaultAsync(c => c.Id == id);
+        return await _context.Caixas.Include(c => c.Usuario).FirstOrDefaultAsync(c => c.Id == id);
     }
 
     public async Task<Caixa> Adicionar(Caixa caixa)
@@ -44,8 +38,7 @@ public class CaixaService
 
     public async Task Deletar(Caixa caixa)
     {
-        caixa.DataExclusao = DateTime.UtcNow;
+        _context.Caixas.Remove(caixa);
         await _context.SaveChangesAsync();
     }
 }
-    
