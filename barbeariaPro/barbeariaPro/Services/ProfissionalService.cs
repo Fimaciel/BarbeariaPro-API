@@ -16,6 +16,7 @@ public class ProfissionalService
     public async Task<List<Profissional>> ObterTodos()
     {
         return await _context.Profissional
+            .Include(p => p.Usuario) 
             .Where(p => p.DataExclusao == null)
             .ToListAsync();
     }
@@ -23,6 +24,7 @@ public class ProfissionalService
     public async Task<Profissional?> ObterPorId(int id)
     {
         return await _context.Profissional
+            .Include(p => p.Usuario)
             .FirstOrDefaultAsync(p => p.Id == id && p.DataExclusao == null);
     }
 
@@ -47,6 +49,7 @@ public class ProfissionalService
 
     public async Task<bool> CpfExiste(string cpf)
     {
-        return await _context.Profissional.AnyAsync(p => p.CPF == cpf && p.DataExclusao == null);
+        return await _context.Profissional
+            .AnyAsync(p => p.CPF == cpf && p.DataExclusao == null);
     }
 }

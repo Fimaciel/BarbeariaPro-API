@@ -1,5 +1,5 @@
-﻿using barbeariaPro.Models;
-using barbeariaPro.dbContext;
+﻿using barbeariaPro.dbContext;
+using barbeariaPro.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace barbeariaPro.Services;

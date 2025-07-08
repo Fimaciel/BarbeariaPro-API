@@ -1,4 +1,6 @@
-﻿public class Pagamento
+﻿namespace barbeariaPro.Models;
+
+public class Pagamento
 {
     public int Id { get; set; }
     public string FormaPagamento { get; set; }

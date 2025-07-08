@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using barbeariaPro.Models;
 using barbeariaPro.DTOs;
+using barbeariaPro.Models;
 
 namespace barbeariaPro.Mappings;
 

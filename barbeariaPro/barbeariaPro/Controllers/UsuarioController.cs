@@ -31,6 +31,7 @@ public class UsuarioController : ControllerBase
     {
         var usuario = await _usuarioService.ObterPorId(id);
         if (usuario == null) return NotFound("Usuário não encontrado.");
+
         return Ok(_mapper.Map<UsuarioDTO>(usuario));
     }
 
@@ -41,6 +42,7 @@ public class UsuarioController : ControllerBase
 
         var usuario = _mapper.Map<Usuario>(dto);
         var novo = await _usuarioService.Adicionar(usuario);
+
         return CreatedAtAction(nameof(GetPorId), new { id = novo.Id }, _mapper.Map<UsuarioDTO>(novo));
     }
 
@@ -52,6 +54,7 @@ public class UsuarioController : ControllerBase
 
         _mapper.Map(dto, existente);
         await _usuarioService.Atualizar(existente);
+
         return NoContent();
     }
 

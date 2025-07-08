@@ -7,11 +7,65 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace barbeariaPro.Migrations
 {
     /// <inheritdoc />
-    public partial class tabelas2 : Migration
+    public partial class Inicial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AlterDatabase()
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Clientes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Nome = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Sobrenome = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Telefone = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Email = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Cpf = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    data_nascimento = table.Column<DateOnly>(type: "date", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Clientes", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Profissional",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Nome = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Sobrenome = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Telefone = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    CPF = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Email = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    DataNasc = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    Especialidade = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    DataExclusao = table.Column<DateTime>(type: "datetime(6)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Profissional", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.CreateTable(
                 name: "Servico",
                 columns: table => new
@@ -52,6 +106,86 @@ namespace barbeariaPro.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Usuario", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Usuario_Profissional_ProfissionalFk",
+                        column: x => x.ProfissionalFk,
+                        principalTable: "Profissional",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Agendamentos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    DataHorario = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    Status = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Observacoes = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    MotivoCancelamento = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ServicoFk = table.Column<int>(type: "int", nullable: false),
+                    ClienteFk = table.Column<int>(type: "int", nullable: false),
+                    ProfissionalFk = table.Column<int>(type: "int", nullable: false),
+                    ServicoId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Agendamentos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Agendamentos_Clientes_ClienteFk",
+                        column: x => x.ClienteFk,
+                        principalTable: "Clientes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Agendamentos_Profissional_ProfissionalFk",
+                        column: x => x.ProfissionalFk,
+                        principalTable: "Profissional",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Agendamentos_Servico_ServicoFk",
+                        column: x => x.ServicoFk,
+                        principalTable: "Servico",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Agendamentos_Servico_ServicoId",
+                        column: x => x.ServicoId,
+                        principalTable: "Servico",
+                        principalColumn: "Id");
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "ProfissionalServico",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    ServicoFk = table.Column<int>(type: "int", nullable: false),
+                    ProfissionalFk = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProfissionalServico", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProfissionalServico_Profissional_ProfissionalFk",
+                        column: x => x.ProfissionalFk,
+                        principalTable: "Profissional",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ProfissionalServico_Servico_ServicoFk",
+                        column: x => x.ServicoFk,
+                        principalTable: "Servico",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -84,32 +218,28 @@ namespace barbeariaPro.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Profissional",
+                name: "Pagamento",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false),
-                    Nome = table.Column<string>(type: "longtext", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    FormaPagamento = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Sobrenome = table.Column<string>(type: "longtext", nullable: false)
+                    Status = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    Valor = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
+                    ComprovantePath = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Telefone = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    CPF = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Email = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    DataNasc = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    Especialidade = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    DataExclusao = table.Column<DateTime>(type: "datetime(6)", nullable: true)
+                    DataEstorno = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    AgendamentoFk = table.Column<int>(type: "int", nullable: false),
+                    AgendamentoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Profissional", x => x.Id);
+                    table.PrimaryKey("PK_Pagamento", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Profissional_Usuario_Id",
-                        column: x => x.Id,
-                        principalTable: "Usuario",
+                        name: "FK_Pagamento_Agendamentos_AgendamentoId",
+                        column: x => x.AgendamentoId,
+                        principalTable: "Agendamentos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
@@ -145,116 +275,20 @@ namespace barbeariaPro.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
-            migrationBuilder.CreateTable(
-                name: "Agendamentos",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    DataHorario = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    Status = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Observacoes = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    MotivoCancelamento = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    ServicoFk = table.Column<int>(type: "int", nullable: false),
-                    ServicoId = table.Column<int>(type: "int", nullable: false),
-                    ClienteFk = table.Column<int>(type: "int", nullable: false),
-                    ClienteId = table.Column<int>(type: "int", nullable: false),
-                    ProfissionalFk = table.Column<int>(type: "int", nullable: false),
-                    ProfissionalId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Agendamentos", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Agendamentos_Clientes_ClienteId",
-                        column: x => x.ClienteId,
-                        principalTable: "Clientes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Agendamentos_Profissional_ProfissionalId",
-                        column: x => x.ProfissionalId,
-                        principalTable: "Profissional",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Agendamentos_Servico_ServicoId",
-                        column: x => x.ServicoId,
-                        principalTable: "Servico",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "ProfissionalServico",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    ServicoFk = table.Column<int>(type: "int", nullable: false),
-                    ServicoId = table.Column<int>(type: "int", nullable: false),
-                    ProfissionalFk = table.Column<int>(type: "int", nullable: false),
-                    ProfissionalId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProfissionalServico", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_ProfissionalServico_Profissional_ProfissionalId",
-                        column: x => x.ProfissionalId,
-                        principalTable: "Profissional",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ProfissionalServico_Servico_ServicoId",
-                        column: x => x.ServicoId,
-                        principalTable: "Servico",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "Pagamento",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    FormaPagamento = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Status = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    Valor = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
-                    ComprovantePath = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    DataEstorno = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    AgendamentoFk = table.Column<int>(type: "int", nullable: false),
-                    AgendamentoId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Pagamento", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Pagamento_Agendamentos_AgendamentoId",
-                        column: x => x.AgendamentoId,
-                        principalTable: "Agendamentos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
+            migrationBuilder.CreateIndex(
+                name: "IX_Agendamentos_ClienteFk",
+                table: "Agendamentos",
+                column: "ClienteFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Agendamentos_ClienteId",
+                name: "IX_Agendamentos_ProfissionalFk",
                 table: "Agendamentos",
-                column: "ClienteId");
+                column: "ProfissionalFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Agendamentos_ProfissionalId",
+                name: "IX_Agendamentos_ServicoFk",
                 table: "Agendamentos",
-                column: "ProfissionalId");
+                column: "ServicoFk");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Agendamentos_ServicoId",
@@ -277,14 +311,20 @@ namespace barbeariaPro.Migrations
                 column: "AgendamentoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProfissionalServico_ProfissionalId",
+                name: "IX_ProfissionalServico_ProfissionalFk",
                 table: "ProfissionalServico",
-                column: "ProfissionalId");
+                column: "ProfissionalFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProfissionalServico_ServicoId",
+                name: "IX_ProfissionalServico_ServicoFk",
                 table: "ProfissionalServico",
-                column: "ServicoId");
+                column: "ServicoFk");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Usuario_ProfissionalFk",
+                table: "Usuario",
+                column: "ProfissionalFk",
+                unique: true);
         }
 
         /// <inheritdoc />
@@ -306,13 +346,16 @@ namespace barbeariaPro.Migrations
                 name: "Agendamentos");
 
             migrationBuilder.DropTable(
-                name: "Profissional");
+                name: "Usuario");
+
+            migrationBuilder.DropTable(
+                name: "Clientes");
 
             migrationBuilder.DropTable(
                 name: "Servico");
 
             migrationBuilder.DropTable(
-                name: "Usuario");
+                name: "Profissional");
         }
     }
 }

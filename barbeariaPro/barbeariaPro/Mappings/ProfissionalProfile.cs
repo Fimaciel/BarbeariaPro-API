@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using barbeariaPro.DTOs;
 using barbeariaPro.Models;
+using barbeariaPro.DTOs;
 
 namespace barbeariaPro.Mappings;
 
@@ -8,6 +8,7 @@ public class ProfissionalProfile : Profile
 {
     public ProfissionalProfile()
     {
-        CreateMap<Profissional, ProfissionalDTO>().ReverseMap();
+        CreateMap<Profissional, ProfissionalDTO>();
+        CreateMap<ProfissionalDTO, Profissional>();
     }
 }

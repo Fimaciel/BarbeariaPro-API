@@ -1,12 +1,12 @@
 using barbeariaPro.dbContext;
 using barbeariaPro.Services;
+using barbeariaPro.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-// Adiciona o DbContext com MySQL (auto detecta a versão)
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -14,9 +14,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     )
 );
 
-
-// Registra o ClienteService no container de dependência
-builder.Services.AddScoped<ClienteService>();
+builder.Services.AddBarbeariaServices();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -24,7 +22,6 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configura o pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

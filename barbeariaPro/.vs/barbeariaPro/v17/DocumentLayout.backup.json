@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\dbcontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\dbcontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\services\\servicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\services\\servicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\agendamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\agendamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\mappings\\servicoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\mappings\\servicoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\caixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\caixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\movimentacaocaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\movimentacaocaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\mappings\\usuarioprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\mappings\\usuarioprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\dtos\\servicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\dtos\\servicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\profissional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\profissional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\profissionalservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\profissionalservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\servico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,12 +43,60 @@
       "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\dtos\\profissionaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\dtos\\profissionaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\controllers\\profissionalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\controllers\\profissionalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\services\\profissionalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\services\\profissionalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\mappings\\profissionalprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\mappings\\profissionalprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\dtos\\servicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\dtos\\servicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\mappings\\usuarioprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\mappings\\usuarioprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\mappings\\servicoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\mappings\\servicoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\mappings\\caixaprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\mappings\\caixaprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\services\\servicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\services\\servicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\mappings\\pagamentoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,32 +107,12 @@
       "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\services\\pagamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\dtos\\profissionaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\dtos\\profissionaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\mappings\\profissionalprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\mappings\\profissionalprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\controllers\\pagamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\controllers\\pagamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\dtos\\pagamentodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\dtos\\pagamentodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\movimentacaocaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\movimentacaocaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,16 +139,8 @@
       "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\services\\caixaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\mappings\\caixaprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\mappings\\caixaprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\mappings\\clienteprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\mappings\\clienteprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\models\\caixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|solutionrelative:barbeariapro\\models\\caixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E114A8EC-C4C3-415B-A145-BE5F624346AD}|barbeariaPro\\barbeariaPro.csproj|d:\\codes_learning\\barbeariapro-api\\barbeariapro\\barbeariapro\\dtos\\caixadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,7 +158,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,119 +166,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServicoController.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\ServicoController.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Controllers\\ServicoController.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\ServicoController.cs",
-              "RelativeToolTip": "barbeariaPro\\Controllers\\ServicoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Models\\Cliente.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Cliente.cs",
+              "RelativeToolTip": "barbeariaPro\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T05:13:39.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ServicoService.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\ServicoService.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Services\\ServicoService.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\ServicoService.cs",
-              "RelativeToolTip": "barbeariaPro\\Services\\ServicoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T05:13:16.935Z",
+              "WhenOpened": "2025-07-08T02:41:02.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ServicoProfile.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\ServicoProfile.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Mappings\\ServicoProfile.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\ServicoProfile.cs",
-              "RelativeToolTip": "barbeariaPro\\Mappings\\ServicoProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Title": "Caixa.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Caixa.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Models\\Caixa.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Caixa.cs",
+              "RelativeToolTip": "barbeariaPro\\Models\\Caixa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T05:13:03.144Z",
+              "WhenOpened": "2025-07-04T20:22:30.6Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Controllers\\UsuarioController.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "barbeariaPro\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Agendamento.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Agendamento.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Models\\Agendamento.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Agendamento.cs",
+              "RelativeToolTip": "barbeariaPro\\Models\\Agendamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T05:12:43.876Z",
+              "WhenOpened": "2025-07-08T02:24:31.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\dbContext\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\dbContext\\AppDbContext.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\dbContext\\AppDbContext.cs",
+              "RelativeToolTip": "barbeariaPro\\dbContext\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T18:21:49.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "UsuarioService.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\UsuarioService.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Services\\UsuarioService.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\UsuarioService.cs",
-              "RelativeToolTip": "barbeariaPro\\Services\\UsuarioService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAwDAAAAAAAAAAAAAAAA==",
+              "Title": "MovimentacaoCaixa.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\MovimentacaoCaixa.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Models\\MovimentacaoCaixa.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\MovimentacaoCaixa.cs",
+              "RelativeToolTip": "barbeariaPro\\Models\\MovimentacaoCaixa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T05:12:10.665Z",
+              "WhenOpened": "2025-07-04T20:32:42.649Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UsuarioProfile.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\UsuarioProfile.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Mappings\\UsuarioProfile.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\UsuarioProfile.cs",
-              "RelativeToolTip": "barbeariaPro\\Mappings\\UsuarioProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Title": "Pagamento.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Pagamento.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Models\\Pagamento.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Pagamento.cs",
+              "RelativeToolTip": "barbeariaPro\\Models\\Pagamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T05:11:31.814Z",
+              "WhenOpened": "2025-07-06T06:10:58.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ServicoDTO.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\ServicoDTO.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\DTOs\\ServicoDTO.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\ServicoDTO.cs",
-              "RelativeToolTip": "barbeariaPro\\DTOs\\ServicoDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Title": "Profissional.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Profissional.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Models\\Profissional.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Profissional.cs",
+              "RelativeToolTip": "barbeariaPro\\Models\\Profissional.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T05:03:30.61Z",
+              "WhenOpened": "2025-07-07T18:23:28.715Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UsuarioDTO.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\UsuarioDTO.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\DTOs\\UsuarioDTO.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\UsuarioDTO.cs",
-              "RelativeToolTip": "barbeariaPro\\DTOs\\UsuarioDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ProfissionalServico.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\ProfissionalServico.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Models\\ProfissionalServico.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\ProfissionalServico.cs",
+              "RelativeToolTip": "barbeariaPro\\Models\\ProfissionalServico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T05:03:24.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Models\\Usuario.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Usuario.cs",
-              "RelativeToolTip": "barbeariaPro\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T05:03:00.049Z",
+              "WhenOpened": "2025-07-08T02:32:54.804Z",
               "EditorCaption": ""
             },
             {
@@ -276,26 +283,78 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Models\\Usuario.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Usuario.cs",
+              "RelativeToolTip": "barbeariaPro\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:03:00.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "ProfissionalDTO.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\ProfissionalDTO.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\DTOs\\ProfissionalDTO.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\ProfissionalDTO.cs",
+              "RelativeToolTip": "barbeariaPro\\DTOs\\ProfissionalDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T06:20:21.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\DTOs\\UsuarioDTO.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\UsuarioDTO.cs",
+              "RelativeToolTip": "barbeariaPro\\DTOs\\UsuarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:03:24.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Extensions\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Extensions\\ServiceExtensions.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Extensions\\ServiceExtensions.cs",
+              "RelativeToolTip": "barbeariaPro\\Extensions\\ServiceExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T18:08:36.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "ProfissionalController.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\ProfissionalController.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Controllers\\ProfissionalController.cs",
               "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\ProfissionalController.cs",
               "RelativeToolTip": "barbeariaPro\\Controllers\\ProfissionalController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAQwEwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-06T06:25:26.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "ProfissionalService.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\ProfissionalService.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Services\\ProfissionalService.cs",
               "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\ProfissionalService.cs",
               "RelativeToolTip": "barbeariaPro\\Services\\ProfissionalService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAmwDMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-06T06:24:17.652Z"
             },
@@ -307,25 +366,109 @@
               "RelativeDocumentMoniker": "barbeariaPro\\Mappings\\ProfissionalProfile.cs",
               "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\ProfissionalProfile.cs",
               "RelativeToolTip": "barbeariaPro\\Mappings\\ProfissionalProfile.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-06T06:23:49.148Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProfissionalDTO.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\ProfissionalDTO.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\DTOs\\ProfissionalDTO.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\ProfissionalDTO.cs",
-              "RelativeToolTip": "barbeariaPro\\DTOs\\ProfissionalDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "ServicoDTO.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\ServicoDTO.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\DTOs\\ServicoDTO.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\ServicoDTO.cs",
+              "RelativeToolTip": "barbeariaPro\\DTOs\\ServicoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T06:20:21.667Z"
+              "WhenOpened": "2025-07-07T05:03:30.61Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Controllers\\UsuarioController.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "barbeariaPro\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:12:43.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UsuarioProfile.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\UsuarioProfile.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Mappings\\UsuarioProfile.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\UsuarioProfile.cs",
+              "RelativeToolTip": "barbeariaPro\\Mappings\\UsuarioProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:11:31.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Program.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Program.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Program.cs",
+              "RelativeToolTip": "barbeariaPro\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T20:02:06.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ServicoProfile.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\ServicoProfile.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Mappings\\ServicoProfile.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\ServicoProfile.cs",
+              "RelativeToolTip": "barbeariaPro\\Mappings\\ServicoProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:13:03.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CaixaProfile.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\CaixaProfile.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Mappings\\CaixaProfile.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\CaixaProfile.cs",
+              "RelativeToolTip": "barbeariaPro\\Mappings\\CaixaProfile.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T20:30:00.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ServicoController.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\ServicoController.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Controllers\\ServicoController.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\ServicoController.cs",
+              "RelativeToolTip": "barbeariaPro\\Controllers\\ServicoController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwCEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:13:39.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ServicoService.cs",
+              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\ServicoService.cs",
+              "RelativeDocumentMoniker": "barbeariaPro\\Services\\ServicoService.cs",
+              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\ServicoService.cs",
+              "RelativeToolTip": "barbeariaPro\\Services\\ServicoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:13:16.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "PagamentoController.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\PagamentoController.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Controllers\\PagamentoController.cs",
@@ -337,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 25,
               "Title": "PagamentoService.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\PagamentoService.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Services\\PagamentoService.cs",
@@ -349,7 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 24,
               "Title": "PagamentoProfile.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\PagamentoProfile.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Mappings\\PagamentoProfile.cs",
@@ -361,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "PagamentoDTO.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\PagamentoDTO.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\DTOs\\PagamentoDTO.cs",
@@ -373,19 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Pagamento.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Pagamento.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Models\\Pagamento.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Pagamento.cs",
-              "RelativeToolTip": "barbeariaPro\\Models\\Pagamento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T06:10:58.319Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Controllers\\HomeController.cs",
@@ -397,19 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Program.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Program.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Program.cs",
-              "RelativeToolTip": "barbeariaPro\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T20:02:06.147Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "MovimentacaoCaixaService.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\MovimentacaoCaixaService.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Services\\MovimentacaoCaixaService.cs",
@@ -421,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "MovimentacaoCaixaProfile.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\MovimentacaoCaixaProfile.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Mappings\\MovimentacaoCaixaProfile.cs",
@@ -433,7 +552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "MovimentacaoCaixaDTO.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\MovimentacaoCaixaDTO.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\DTOs\\MovimentacaoCaixaDTO.cs",
@@ -445,19 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "MovimentacaoCaixa.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\MovimentacaoCaixa.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Models\\MovimentacaoCaixa.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\MovimentacaoCaixa.cs",
-              "RelativeToolTip": "barbeariaPro\\Models\\MovimentacaoCaixa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T20:32:42.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "CaixaService.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Services\\CaixaService.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Services\\CaixaService.cs",
@@ -469,19 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CaixaProfile.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\CaixaProfile.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Mappings\\CaixaProfile.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\CaixaProfile.cs",
-              "RelativeToolTip": "barbeariaPro\\Mappings\\CaixaProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T20:30:00.986Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "CaixaDTO.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\DTOs\\CaixaDTO.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\DTOs\\CaixaDTO.cs",
@@ -493,19 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Caixa.cs",
-              "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Caixa.cs",
-              "RelativeDocumentMoniker": "barbeariaPro\\Models\\Caixa.cs",
-              "ToolTip": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Models\\Caixa.cs",
-              "RelativeToolTip": "barbeariaPro\\Models\\Caixa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T20:22:30.6Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "CaixaController.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\CaixaController.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Controllers\\CaixaController.cs",
@@ -517,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "ClienteController.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Controllers\\ClienteController.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Controllers\\ClienteController.cs",
@@ -529,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "ClienteProfile.cs",
               "DocumentMoniker": "D:\\Codes_learning\\BarbeariaPro-API\\barbeariaPro\\barbeariaPro\\Mappings\\ClienteProfile.cs",
               "RelativeDocumentMoniker": "barbeariaPro\\Mappings\\ClienteProfile.cs",

@@ -9,5 +9,5 @@ public class ProfissionalDTO
     public string CPF { get; set; }
     public string Email { get; set; }
     public DateTime DataNasc { get; set; }
-    public string Especialidade { get; set; }  
+    public string Especialidade { get; set; }
 }

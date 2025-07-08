@@ -1,5 +1,4 @@
 ﻿namespace barbeariaPro.Models;
-
 public class Profissional
 {
     public int Id { get; set; }
@@ -14,5 +13,6 @@ public class Profissional
 
     public ICollection<Agendamento> Agendamentos { get; set; }
     public ICollection<ProfissionalServico> Servicos { get; set; }
+
     public Usuario Usuario { get; set; }
 }

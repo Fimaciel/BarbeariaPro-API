@@ -12,4 +12,3 @@ public class MovimentacaoCaixa
     public int CaixaFk { get; set; }
     public Caixa Caixa { get; set; }
 }
-    
