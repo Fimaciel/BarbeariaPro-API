@@ -16,6 +16,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddBarbeariaServices();
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("*").AllowAnyMethod().AllowAnyHeader(); 
+    });
+});
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -28,6 +36,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
