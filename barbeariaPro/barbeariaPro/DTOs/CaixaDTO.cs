@@ -10,5 +10,4 @@ public class CaixaDTO
     public string Status { get; set; }
 
     public int UsuarioFk { get; set; }
-    public string NomeUsuario { get; set; }
 }

@@ -41,4 +41,11 @@ public class MovimentacaoCaixaService
         _context.MovimentacoesCaixa.Remove(movimentacao);
         await _context.SaveChangesAsync();
     }
+    public async Task<List<MovimentacaoCaixa>> ObterPorCaixa(int caixaId)
+    {
+        return await _context.MovimentacoesCaixa
+            .Where(m => m.CaixaFk == caixaId)
+            .ToListAsync();
+    }
+
 }

@@ -64,4 +64,15 @@ public class CaixaController : ControllerBase
         await _caixaService.Deletar(caixaExistente);
         return NoContent();
     }
+
+
+    [HttpGet("ultimo")]
+    public async Task<IActionResult> GetUltimoCaixa()
+    {
+        var ultimoCaixa = await _caixaService.ObterUltimoCaixa();
+        if (ultimoCaixa == null) return NotFound("Nenhum caixa encontrado.");
+
+        return Ok(_mapper.Map<CaixaDTO>(ultimoCaixa));
+    }
+
 }

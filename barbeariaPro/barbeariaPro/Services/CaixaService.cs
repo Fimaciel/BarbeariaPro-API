@@ -41,4 +41,12 @@ public class CaixaService
         _context.Caixas.Remove(caixa);
         await _context.SaveChangesAsync();
     }
+
+    public async Task<Caixa> ObterUltimoCaixa()
+    {
+        return await _context.Caixas
+            .OrderByDescending(c => c.Id)
+            .FirstOrDefaultAsync();
+    }
+
 }

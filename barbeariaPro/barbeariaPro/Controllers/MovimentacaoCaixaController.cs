@@ -64,4 +64,16 @@ public class MovimentacaoCaixaController : ControllerBase
         await _movimentacaoCaixaService.Deletar(movimentacaoExistente);
         return NoContent();
     }
+
+    [HttpGet("caixa/{caixaId}")]
+    public async Task<IActionResult> GetPorCaixa(int caixaId)
+    {
+        var movimentacoes = await _movimentacaoCaixaService.ObterPorCaixa(caixaId);
+
+        if (movimentacoes == null || !movimentacoes.Any())
+            return NotFound("Nenhuma movimentação encontrada para este caixa.");
+
+        return Ok(_mapper.Map<List<MovimentacaoCaixaDTO>>(movimentacoes));
+    }
+
 }
