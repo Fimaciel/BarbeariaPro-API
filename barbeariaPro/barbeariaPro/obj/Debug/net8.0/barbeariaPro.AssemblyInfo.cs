@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("barbeariaPro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3fafd636cee4366da5981c777e680c0757128f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d0cb8aa935a16ea16914bb564295d58a39e4845")]
 [assembly: System.Reflection.AssemblyProductAttribute("barbeariaPro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("barbeariaPro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

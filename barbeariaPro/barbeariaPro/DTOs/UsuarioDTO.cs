@@ -1,4 +1,6 @@
-﻿namespace barbeariaPro.DTOs;
+﻿using barbeariaPro.Validations;
+
+namespace barbeariaPro.DTOs;
 
 public class UsuarioDTO
 {
@@ -6,6 +8,7 @@ public class UsuarioDTO
     public string Email { get; set; }
     public string Perfil { get; set; }
 
+    [SenhaValidation]
     public string Senha { get; set; }
 
     public bool isAdmin { get; set; }
